@@ -67,7 +67,7 @@ app.post("/module_3", (req, res) => {
 						sessionID: "${sessionID}",
 						user: "${moodleData.body.ext_user_username}"
 					};
-				`);
+				`) + moodleData.body;
 
 		res.setHeader("Content-Type", "text/html");
 		res.send(sendMe);
